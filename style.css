@@ -11,18 +11,20 @@ p.categorie {
     display: inline-block;
     padding: 10px 30px;
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: -20px;
     font-weight: bold;
 }
 div.categorie {
-    margin-bottom: -20px;
-    margin-top: 60px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow: visible;
 }
 div.contenu {
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, .1);
     background-color: white;
-    margin: 0px 10% 60px 10%;
-    padding: 30px;
+    margin: 30px 8px 20px 8px;
+    padding: 0px 8px 20px 8px;
+    overflow: visible;
 }
 h1 {
     text-align: center;
@@ -48,7 +50,7 @@ hr {
 table.info {
     position: absolute;
     width: 100%;
-    height: 80px;
+    height: 50px;
     bottom: 0;
     color: white;
     background-color: #6C829D;
@@ -56,11 +58,11 @@ table.info {
 }
 table.info td {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     vertical-align: top;
 }
 table.info th {
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
 }
 div.info {
@@ -77,9 +79,6 @@ div.colonne1 {
     display: inline-block;
     width: 100%;
 }
-div.colonne2 {
-    float: right;
-}
 div.colonne h2{
     text-align: center;
     text-transform: uppercase;
@@ -89,7 +88,6 @@ div.colonne h2{
     margin-bottom: 20px;
 }
 div.colonne {
-    width: 45%;
     margin-top: 20px;
 }
 
@@ -125,4 +123,42 @@ div.colonne {
     font-size: 14px;
     padding-left: 10px;
     padding-bottom: 10px;
+}
+
+/*STYLES POUR ORDINATEUR*/
+@media only screen and (min-width: 768px) {
+    div.contenu {
+        min-width: 350px;
+        margin: 60px 10% 80px 10%;
+        padding: 0px 30px 30px 30px;
+    }
+    table.info {
+        position: absolute;
+        width: 100%;
+        height: 80px;
+    }
+    table.info th {
+        font-size: 16px;
+    }
+    table.info td {
+        font-size: 14px;
+    }
+    div.colonne2 {
+        float: right;
+    }
+    div.colonne {
+        width: 45%;
+        margin-top: 20px;
+    }
+    div.colonne1 {
+        display: inline-block;
+    }
+}
+@media only screen and (min-width: 900px) {
+    div.contenu {
+        min-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 645px;
+    }
 }
